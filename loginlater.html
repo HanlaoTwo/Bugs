@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+<script src="/content/loginbox/loginapi.js" ></script>
+<script>
+	function redirect_back(){
+		var redirect = "http://www.csdn.net/";
+		var data = {"userId":51858301,"isLocked":false,"userName":"BoomHankers","email":"hankeboom@163.com","password":"495c22e7b20044f86bb81a9dd68381b2","registerIP":"61.150.43.56","isDeleted":false,"isActived":true,"role":0,"registerTime":"May 4, 2015 9:26:02 PM","userType":0,"lastLoginIP":"61.175.197.70","lastLoginTime":"Oct 26, 2016 9:48:02 PM","loginTimes":50,"user_status":0,"activeTime":"May 4, 2015 9:26:16 PM","passwordStrongLevel":2,"ucSyncStatus":true,"nickName":"HanLaotwo","avatar":"http://avatar.csdn.net/B/0/B/1_boomhankers.jpg"};
+		var userInfo = "NdICe6tRsHdJe1qfejbpaAe3giCJC1kp06f/D19ij/EWjjBY+KdaRkUk3W2mB0M6CEOf3a/IupWZ9+GhY3/CClzIrbE9QcLkZgvRICSb2xtHpVV0H95oQNMXqJFWFrnkSzP3YCM32TwUXDgXk/AZKA=="; 
+		data.userName = data.userName;
+		data.encryptUserInfo = userInfo;
+		
+		csdn.login_param.call = function (){
+			location.href = redirect;
+		}
+		
+		var _data = {};
+		_data.status = true;
+		_data.data = data;
+		
+		var oauth = "";
+		if(oauth == "true"){
+			csdn.login_back(_data);	
+		}else{
+			csdn.login_data = data;
+			csdn.login_end();
+		};
+	}
+	
+</script>
+
+	
+	
+		<body onload="redirect_back();"></body>
+	
+
+
+
