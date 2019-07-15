@@ -24,3 +24,9 @@ i = 0
 for tile in tileArray:
     print(tile+": "+timeArray[i])
     i = i+1
+    public String getManagerDetail(){
+        RespModel res = new RespModel();
+
+
+        return JSONObject.toJSON(res).toString();
+    }
